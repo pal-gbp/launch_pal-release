@@ -2,6 +2,66 @@
 Changelog for package launch_pal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.12 (2024-06-11)
+-------------------
+* Update Changelog
+* Merge branch 'tpe/upate_std_and_launch_arg' into 'master'
+  update lauch args for the omni base
+  See merge request common/launch_pal!55
+* update lauch args for the omni base
+* Contributors: David ter Kuile, davidterkuile, thomas.peyrucain
+
+* Merge branch 'tpe/upate_std_and_launch_arg' into 'master'
+  update lauch args for the omni base
+  See merge request common/launch_pal!55
+* update lauch args for the omni base
+* Contributors: davidterkuile, thomas.peyrucain
+
+0.1.11 (2024-05-28)
+-------------------
+* Merge branch 'feat/aca/find-pkg-share-yaml' into 'master'
+  Feat/aca/find pkg share yaml
+  See merge request common/launch_pal!54
+* linters
+* linters
+* linters
+* added import, modified explication
+* extend _parse_config functionality
+* Contributors: andreacapodacqua, davidterkuile
+
+0.1.10 (2024-05-17)
+-------------------
+* Merge branch 'omm/feat/rgdb_sensors_rename' into 'master'
+  Proper courier_rgbd_sensor name
+  See merge request common/launch_pal!52
+* Proper courier_rgbd_sensor name
+* Contributors: davidterkuile, oscarmartinez
+
+0.1.9 (2024-05-16)
+------------------
+* Merge branch 'VKG/fix/screen-parameters' into 'master'
+  fixed screen parameters, edited configuration and robot argument files
+  See merge request common/launch_pal!51
+* typo fixed
+* fixed screen parameters, edited configuration and robot argument files
+* Contributors: Vamsi GUDA, davidterkuile
+
+0.1.8 (2024-05-15)
+------------------
+* Merge branch 'omm/common_pos_args' into 'master'
+  Robot position args added to common
+  See merge request common/launch_pal!50
+* Robot position args added to common
+* Contributors: davidterkuile, oscarmartinez
+
+0.1.7 (2024-05-09)
+------------------
+* Merge branch 'dtk/fix/bool-args' into 'master'
+  Set all boolean robot args to capital value
+  See merge request common/launch_pal!49
+* Set all boolean robot args to capital value
+* Contributors: Noel Jimenez, davidterkuile
+
 0.1.6 (2024-05-08)
 ------------------
 * added tuck arm parameter
