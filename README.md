@@ -1,3 +1,26 @@
+## launch_pal (humble) - 0.1.12-1
+
+The packages in the `launch_pal` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble launch_pal -y` on `Tue, 18 Jun 2024 09:30:25 -0000`
+
+The `launch_pal` package was released.
+
+Version of package(s) in repository `launch_pal`:
+
+- upstream repository: https://github.com/pal-robotics/launch_pal.git
+- release repository: https://github.com/pal-gbp/launch_pal-release.git
+- rosdistro version: `0.1.6-1`
+- old version: `0.1.6-1`
+- new version: `0.1.12-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## launch_pal (humble) - 0.1.6-1
 
 The packages in the `launch_pal` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble launch_pal` on `Wed, 08 May 2024 10:26:38 -0000`
