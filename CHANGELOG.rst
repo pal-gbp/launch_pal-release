@@ -2,6 +2,39 @@
 Changelog for package launch_pal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.15 (2024-07-04)
+-------------------
+* Merge branch 'omm/feat/composition_utils' into 'master'
+  Composition utils
+  See merge request common/launch_pal!38
+* Added package field for extended usability
+* Readme and new type variable name
+* Removing pal_computer_monitor dep
+* Composition utils to generate containers from a yaml files
+* Merge branch 'paps007' into 'master'
+  Add implementation of PAPS-007 'get_pal_configuration'
+  See merge request common/launch_pal!57
+* add impl of PAPS-007 'get_pal_configuration'
+* Merge branch 'abr/feat/advanced-navigation' into 'master'
+  added advanced navigation
+  See merge request common/launch_pal!58
+* added advanced navigation
+* Contributors: Noel Jimenez, Oscar, Séverin Lemaignan, antoniobrandi, davidterkuile
+
+0.1.14 (2024-07-03)
+-------------------
+* Merge branch 'air/feat/add_slam' into 'master'
+  add slam param
+  See merge request common/launch_pal!60
+* fix declare slam
+* add slam param
+* Merge branch 'feature/tiago-dual-support' into 'master'
+  feat: add robot_name arg to CommonArgs
+  See merge request common/launch_pal!59
+* feat: add robot_name to CommonArgs
+* feat: tiago dual support
+* Contributors: Aina, davidterkuile, josegarcia
+
 0.1.13 (2024-06-26)
 -------------------
 * Merge branch 'dtk/move-robot-args' into 'master'
