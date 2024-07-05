@@ -30,16 +30,31 @@ class CommonArgs:
         name='namespace',
         default_value='',
         description='Define namespace of the robot.')
+    robot_name: DeclareLaunchArgument = DeclareLaunchArgument(
+        'robot_name',
+        default_value='pmb2',
+        description='Name of the robot. ',
+        choices=['pmb2', 'tiago', 'tiago_dual', 'pmb3', 'ari', 'omni_base', 'tiago_pro'])
     navigation: DeclareLaunchArgument = DeclareLaunchArgument(
         name='navigation',
         default_value='False',
         choices=['True', 'False'],
         description='Specify if launching Navigation2.')
+    advanced_navigation: DeclareLaunchArgument = DeclareLaunchArgument(
+        name='advanced_navigation',
+        default_value='False',
+        choices=['True', 'False'],
+        description='Specify if launching Advanced Navigation.')
     moveit: DeclareLaunchArgument = DeclareLaunchArgument(
         name='moveit',
         default_value='True',
         choices=['True', 'False'],
         description='Specify if launching MoveIt 2.')
+    slam: DeclareLaunchArgument = DeclareLaunchArgument(
+        "slam",
+        default_value="False",
+        description="Whether or not you are using SLAM",
+    )
     world_name: DeclareLaunchArgument = DeclareLaunchArgument(
         name='world_name',
         default_value='pal_office',
