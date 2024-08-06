@@ -16,11 +16,24 @@ import unittest
 import os
 from launch_pal.pal_parameters import get_pal_configuration
 
-os.environ['AMENT_PREFIX_PATH'] = os.path.join(
-    os.getcwd(), 'test', 'mock_rosroot_pal_parameters')
-
 
 class TestPalGetConfiguration(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        TestPalGetConfiguration.prev_ament_prefix_path = os.environ.get(
+            'AMENT_PREFIX_PATH', None)
+
+        os.environ['AMENT_PREFIX_PATH'] = os.path.join(
+            os.getcwd(), 'test', 'mock_rosroot_pal_parameters')
+
+    @classmethod
+    def tearDownClass(cls):
+        if TestPalGetConfiguration.prev_ament_prefix_path is not None:
+            os.environ['AMENT_PREFIX_PATH'] = TestPalGetConfiguration.prev_ament_prefix_path
+        else:
+            del os.environ['AMENT_PREFIX_PATH']
+
     def test_get_configuration(self):
         config = get_pal_configuration(pkg='test_node', node='test_node')
 
@@ -37,6 +50,31 @@ class TestPalGetConfiguration(unittest.TestCase):
             config['remappings'],
             [
                 ('remap1', '/robot-remap'),
+                ('remap2', '/test-remap'),
+                ('remap3', '/robot-remap'),
+            ]
+        )
+
+    def test_get_configuration_user_overrides(self):
+
+        os.environ['PAL_USER_PARAMETERS_PATH'] = os.path.join(
+            os.getcwd(), 'test', 'mock_rosroot_pal_parameters', 'home', 'pal')
+
+        config = get_pal_configuration(pkg='test_node', node='test_node')
+
+        self.assertCountEqual(
+            config['parameters'],
+            [
+                {'param1': 'test_node user param1 value high precedence'},
+                {'param2': 'robot-cfg value'},
+                {'param3': 'test-cfg value'},
+            ]
+        )
+
+        self.assertCountEqual(
+            config['remappings'],
+            [
+                ('remap1', '/user-robot-remap'),
                 ('remap2', '/test-remap'),
                 ('remap3', '/robot-remap'),
             ]
