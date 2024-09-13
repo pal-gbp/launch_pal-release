@@ -2,6 +2,12 @@
 Changelog for package launch_pal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.0 (2024-08-28)
+------------------
+* add tests for namespace
+* add namespaces option when including launch file
+* Contributors: thomasung
+
 0.3.0 (2024-08-06)
 ------------------
 * Add talos and kangaroo as robots
