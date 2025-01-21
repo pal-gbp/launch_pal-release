@@ -2,6 +2,38 @@
 Changelog for package launch_pal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.10.0 (2025-01-20)
+-------------------
+* Update wrong return value
+* Apply suggestion after review
+* Apply 1 suggestion(s) to 1 file(s)
+* Add jinja2 dependency
+* Add master calibration implementation
+* Contributors: David ter Kuile, antoniobrandi
+
+0.9.0 (2024-12-02)
+------------------
+* Merge branch 'abr/feat/docking' into 'master'
+  added docking args
+  See merge request common/launch_pal!73
+* added docking args
+* Merge branch 'upt/tun/readme' into 'master'
+  update robot_arguments readme section
+  See merge request common/launch_pal!71
+* remove internal gitlab links
+* fix linting issues
+* update robot_arguments readme section
+* Contributors: antoniobrandi, davidterkuile, thomasung
+
+0.8.0 (2024-11-11)
+------------------
+* Suggestions apply
+* Added xacro missing arg warning
+* Removing unnecesary parsing
+* Launch arguments check
+* Xacro args checker
+* Contributors: oscarmartinez
+
 0.7.0 (2024-10-16)
 ------------------
 * update README iwith get_pal_configuration automatic arguments
