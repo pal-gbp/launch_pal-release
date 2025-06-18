@@ -2,6 +2,21 @@
 Changelog for package launch_pal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.14.1 (2025-06-16)
+-------------------
+* Fix end-effector ari
+* Contributors: davidterkuile
+
+0.14.0 (2025-06-05)
+-------------------
+* introduce robot_info_file
+* Contributors: antoniobrandi
+
+0.13.0 (2025-06-05)
+-------------------
+* introduce IfNodeRunning and UnlessNodeRunning
+* Contributors: antoniobrandi
+
 0.12.1 (2025-04-09)
 -------------------
 * Added argument for the side an arm is mounted

@@ -282,3 +282,70 @@ Example:
 robot_name = 'tiago'
 laser_model_arg = get_laser_model(robot_name)
 ```
+
+## Conditions
+
+### IfNodeRunning
+
+Condition that checks if a node is running. It can be used to conditionally execute actions based on the state of a node.
+
+```python
+from launch_pal.conditions import IfNodeRunning
+from launch_ros.actions import Node
+node_a = Node(
+  package='my_package',
+  executable='my_executable',
+  name='node_a',
+  condition=IfNodeRunning(node_name='node_b'),
+)
+```
+
+In the example above, `node_a` will be launched only if `node_b` is running.
+
+### UnlessNodeRunning
+Condition that checks if a node is not running. It can be used to conditionally execute actions based on the state of a node.
+
+```python
+from launch_pal.conditions import UnlessNodeRunning
+from launch_ros.actions import Node
+node_a = Node(
+  package='my_package',
+  executable='my_executable',
+  name='node_a',
+  condition=UnlessNodeRunning(node_name='node_b'),
+)
+```
+In the example above, `node_a` will be launched only if `node_b` is **NOT** running.
+
+
+## Substitutions
+
+### RobotInfoFile
+
+Creates a temporary file with the robot information which can be used by the [`robot_info_publisher`](https://gitlab.pal-robotics.com/apps/robot_info_publisher).
+
+```python
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+from launch_pal.substitutions import RobotInfoFile
+robot_info_file = RobotInfoFile(
+  content={
+    'robot_name': 'tiago',
+    'robot_family': 'tiago',
+    'robot_unit': 'tiago_unit',
+    'robot_type': DeclareLaunchArgument('robot_type'),
+    'robot_radius': 0.275,
+    'robot_height': LaunchConfiguration('robot_height'),
+  }
+)
+```
+This will create a temporary file with the robot information in the format expected by the `robot_info_publisher`.
+The file path can then be used to set an environment variable that is accessed by the `robot_info_publisher`.
+
+```python
+from launch.actions import SetEnvironmentVariable
+robot_info_env = SetEnvironmentVariable(
+    name='ROBOT_INFO_PATH',
+    value=robot_info_file
+)
+```
